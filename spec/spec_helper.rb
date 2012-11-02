@@ -31,4 +31,3 @@ RSpec.configure do |config|
     Dir[File.join(ENGINE_RAILS_ROOT, 'spec/requests/step_helpers/**/*.rb')].each { |f| require f }
   end
 end
-
