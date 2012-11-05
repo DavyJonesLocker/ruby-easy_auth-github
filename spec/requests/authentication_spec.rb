@@ -11,7 +11,7 @@ feature 'Github OAuth Authentication', :js do
   end
 
   scenario 'Handling a Github callback' do
-    visit o_auth2_callback_path(:provider => :github, :code => 'test-auth-code')
+    visit oauth2_callback_path(:provider => :github, :code => 'test-auth-code')
 
     current_path.should eq dashboard_path
     page.should have_content '123456789'
