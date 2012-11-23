@@ -1,19 +1,19 @@
 module EasyAuth::Models::Identities::Oauth2::Github
   def authorize_url
-    '/login/oauth/authorize'
+    'https://github.com/login/oauth/authorize'
   end
 
   private
 
   def user_info_url
-    'https://api.github.com/user'
+    '/user'
   end
 
   def token_url
-    '/login/oauth/access_token'
+    'https://github.com/login/oauth/access_token'
   end
 
   def site_url
-    'https://github.com'
+    'https://api.github.com'
   end
 end
