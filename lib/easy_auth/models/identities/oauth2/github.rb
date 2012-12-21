@@ -7,8 +7,6 @@ module EasyAuth::Models::Identities::Oauth2::Github
     'user'
   end
 
-  private
-
   def user_info_url
     '/user'
   end
