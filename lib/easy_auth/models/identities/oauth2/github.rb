@@ -3,6 +3,10 @@ module EasyAuth::Models::Identities::Oauth2::Github
     'https://github.com/login/oauth/authorize'
   end
 
+  def oauth2_scope
+    'user'
+  end
+
   private
 
   def user_info_url
