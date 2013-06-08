@@ -1,4 +1,8 @@
 module EasyAuth::Models::Identities::Oauth2::Github
+  def account_attributes_map
+    { :email => 'email', :username => 'login', :full_name => 'name', :avatar_url => 'avatar_url', :location => 'location' }
+  end
+
   def authorize_url
     'https://github.com/login/oauth/authorize'
   end
@@ -17,5 +21,9 @@ module EasyAuth::Models::Identities::Oauth2::Github
 
   def site_url
     'https://api.github.com'
+  end
+
+  def retrieve_uid(user_info)
+    user_info['email']
   end
 end

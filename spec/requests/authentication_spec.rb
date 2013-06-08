@@ -1,8 +1,6 @@
 require 'spec_helper'
 
-feature 'Github OAuth Authentication', :js do
-  use_vcr_cassette 'github_oauth', :match_requests_on => [:uri], :decode_compressed_response => true
-
+feature 'Github OAuth Authentication', :js, :vcr do
   scenario 'Github link redirects to the Github OAuth url' do
     visit root_path
 
