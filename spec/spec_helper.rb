@@ -20,8 +20,4 @@ Dir[File.join(ENGINE_RAILS_ROOT, 'spec/config/**/*.rb')].each { |f| require f }
 
 RSpec.configure do |config|
   config.use_transactional_fixtures = true
-
-  config.before(:each, :type => :request) do
-    Dir[File.join(ENGINE_RAILS_ROOT, 'spec/requests/step_helpers/**/*.rb')].each { |f| require f }
-  end
 end
