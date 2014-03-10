@@ -11,7 +11,7 @@ module EasyAuth::Models::Identities::Oauth2::Github
     'user'
   end
 
-  def user_attributes_url
+  def account_attributes_url
     '/user'
   end
 
@@ -23,7 +23,7 @@ module EasyAuth::Models::Identities::Oauth2::Github
     'https://api.github.com'
   end
 
-  def retrieve_uid(user_attributes)
-    user_attributes['email']
+  def retrieve_uid(account_attributes)
+    account_attributes['email']
   end
 end
